@@ -1,10 +1,8 @@
-// Функция для получения id из URL
 function getUserIdFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("id");
 }
 
-// LOGIN
 const loginBtn = document.getElementById("loginBtn");
 if (loginBtn) {
   loginBtn.addEventListener("click", async () => {
@@ -24,7 +22,6 @@ if (loginBtn) {
   });
 }
 
-// PROFILE
 const profileName = document.getElementById("profileName");
 const profileEmail = document.getElementById("profileEmail");
 const user = JSON.parse(localStorage.getItem("user"));
@@ -33,14 +30,12 @@ if (profileName && user) {
   profileEmail.textContent = `Email: ${user.email}`;
 }
 
-// LOGOUT
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("user");
   window.location.href = "login.html";
 });
 
-// USERS LIST
 async function loadUsers() {
   const tableBody = document.querySelector("#userTable tbody");
   if (!tableBody) return;
@@ -65,14 +60,12 @@ async function loadUsers() {
   });
 }
 
-// DELETE USER
 async function deleteUser(id) { 
   if (!confirm("Удалить пользователя?")) return;
   await fetch(`/api/auth/${id}`, { method: "DELETE" });
   loadUsers();
 }
 
-// ADD USER
 const addBtn = document.getElementById("addBtn");
 if (addBtn) {
   addBtn.addEventListener("click", async () => {
@@ -90,7 +83,6 @@ if (addBtn) {
   });
 }
 
-// EDIT USER PAGE
 const editBtn = document.getElementById("saveEditBtn");
 if (editBtn) {
   editBtn.addEventListener("click", async () => {
@@ -111,7 +103,6 @@ if (editBtn) {
   });
 }
 
-// Загрузка данных пользователя для edit-user.html
 if (document.getElementById("editName")) {
   const id = getUserIdFromURL();
   fetch(`/api/auth/${id}`).then(res => res.json())
