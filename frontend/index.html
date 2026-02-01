@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Users</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<nav>
+  <a href="profile.html" class="button-link"><i class="fas fa-user"></i>Profile</a>
+  <a href="add-user.html" class="button-link"><i class="fas fa-user-plus"></i>Add User</a>
+  <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i>Logout</button>
+</nav>
+
+<div class="container">
+  <h1>Users List</h1>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

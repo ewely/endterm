@@ -1,0 +1,259 @@
+/* Общие настройки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #ffcce6);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Сверху вниз */
+}
+
+/* Навигация */
+nav {
+  width: 100%;
+  background-color: #ffb6c1;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+nav a, nav button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #ff66a3;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav a:hover, nav button:hover {
+  background-color: #ff3399;
+}
+
+/* Контейнер контента */
+.container {
+  flex: 1; /* занимает оставшееся место */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* вертикальный центр */
+  padding: 30px 20px;
+  width: 100%;
+}
+
+/* Внутри контейнера */
+.container > div {
+  background-color: #fff0f5;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Заголовки */
+h1 {
+  margin-bottom: 20px;
+  color: #ff3399;
+}
+
+/* Формы */
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ff99cc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #ff3399;
+}
+
+/* Кнопки */
+button {
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff66a3;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff3399;
+  transform: translateY(-2px);
+}
+
+/* Таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #ff99cc;
+  color: #fff;
+}
+
+td {
+  background-color: #ffe6f0;
+}
+
+tr:hover td {
+  background-color: #ffcce6;
+  transition: 0.3s;
+}
+
+/* Action buttons в таблице */
+.action-btn {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background-color: #ff66a3;
+}
+
+.edit-btn:hover {
+  background-color: #ff3399;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background-color: #ff3366;
+}
+
+.delete-btn:hover {
+  background-color: #ff0033;
+  transform: translateY(-1px);
+}
+
+/* Ссылки кнопок */
+.button-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #ff66a3;
+  transition: 0.3s;
+}
+
+.button-link:hover {
+  background-color: #ff3399;
+  transform: translateY(-1px);
+}
+
+/* Центровка форм логина */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ===== CENTERED PAGES (login, profile, add, edit) ===== */
+
+.center-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Карточки */
+.card {
+  background-color: #fff0f5;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.small-card {
+  max-width: 400px;
+}
+
+/* ===== PROFILE TABLE ===== */
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.profile-table th {
+  text-align: left;
+  padding: 12px;
+  background-color: #ff99cc;
+  color: white;
+  border-radius: 8px 0 0 8px;
+}
+
+.profile-table td {
+  padding: 12px;
+  background-color: #ffe6f0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ===== FORM LAYOUT (VERTICAL) ===== */
+
+.card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #ffb6c1;
+  font-size: 15px;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  background-color: #ff66a3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.card button:hover {
+  background-color: #ff3385;
+  transform: translateY(-2px);
+}
+
