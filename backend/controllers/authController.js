@@ -1,6 +1,5 @@
 const User = require("../models/User");
 
-// Функция регистрации
 const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -12,7 +11,6 @@ const register = async (req, res) => {
   }
 };
 
-// Функция логина (пустая для теста)
 const login = async (req, res) => {
   res.status(200).json({ message: "Login endpoint" });
 };
