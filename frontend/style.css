@@ -1,4 +1,3 @@
-/* Общие настройки */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,10 +10,9 @@ body {
   color: #333;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Сверху вниз */
+  flex-direction: column; 
 }
 
-/* Навигация */
 nav {
   width: 100%;
   background-color: #ffb6c1;
@@ -42,17 +40,15 @@ nav a:hover, nav button:hover {
   background-color: #ff3399;
 }
 
-/* Контейнер контента */
 .container {
-  flex: 1; /* занимает оставшееся место */
+  flex: 1; 
   display: flex;
   justify-content: center;
-  align-items: center; /* вертикальный центр */
+  align-items: center; 
   padding: 30px 20px;
   width: 100%;
 }
 
-/* Внутри контейнера */
 .container > div {
   background-color: #fff0f5;
   padding: 30px 40px;
@@ -63,13 +59,11 @@ nav a:hover, nav button:hover {
   text-align: center;
 }
 
-/* Заголовки */
 h1 {
   margin-bottom: 20px;
   color: #ff3399;
 }
 
-/* Формы */
 input[type="text"], input[type="email"], input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -84,7 +78,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   border-color: #ff3399;
 }
 
-/* Кнопки */
 button {
   padding: 12px;
   margin-top: 15px;
@@ -102,7 +95,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Таблицы */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -130,7 +122,6 @@ tr:hover td {
   transition: 0.3s;
 }
 
-/* Action buttons в таблице */
 .action-btn {
   margin-right: 5px;
   padding: 5px 10px;
@@ -160,7 +151,6 @@ tr:hover td {
   transform: translateY(-1px);
 }
 
-/* Ссылки кнопок */
 .button-link {
   text-decoration: none;
   color: #fff;
@@ -176,13 +166,11 @@ tr:hover td {
   transform: translateY(-1px);
 }
 
-/* Центровка форм логина */
 .login-container {
   width: 100%;
   max-width: 400px;
 }
 
-/* ===== CENTERED PAGES (login, profile, add, edit) ===== */
 
 .center-page {
   flex: 1;
@@ -191,7 +179,6 @@ tr:hover td {
   align-items: center;
 }
 
-/* Карточки */
 .card {
   background-color: #fff0f5;
   padding: 30px 40px;
@@ -206,7 +193,6 @@ tr:hover td {
   max-width: 400px;
 }
 
-/* ===== PROFILE TABLE ===== */
 
 .profile-table {
   width: 100%;
@@ -228,7 +214,6 @@ tr:hover td {
   border-radius: 0 8px 8px 0;
 }
 
-/* ===== FORM LAYOUT (VERTICAL) ===== */
 
 .card input {
   width: 100%;
