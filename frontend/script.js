@@ -112,5 +112,4 @@ if (document.getElementById("editName")) {
   });
 }
 
-// LOAD USERS
 loadUsers();
