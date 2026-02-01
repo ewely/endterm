@@ -2,7 +2,6 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 
-// -------------------- REGISTER --------------------
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -18,7 +17,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// -------------------- LOGIN --------------------
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -35,7 +33,6 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// -------------------- GET ALL USERS --------------------
 router.get("/", async (req, res) => {
   try {
     const users = await User.find({}, "-password"); // не отправляем пароли
@@ -46,7 +43,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// -------------------- DELETE USER --------------------
 router.delete("/:id", async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
@@ -57,7 +53,6 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// -------------------- UPDATE USER --------------------
 router.put("/:id", async (req, res) => {
   try {
     const { name, email } = req.body;
@@ -73,12 +68,10 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// -------------------- ADD USER --------------------
 router.post("/add", async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    // Проверка на существующего пользователя
     const existing = await User.findOne({ email });
     if (existing) return res.status(400).json({ message: "Пользователь уже существует" });
 
