@@ -18,5 +18,5 @@ Technologies
 
 How to run
 1. Install dependencies in backend
-2. Create `.env` file with MongoDB URI
-3. Run `node server.js`
+2. Create '.env' file with MongoDB URI
+3. Run 'node server.js'
